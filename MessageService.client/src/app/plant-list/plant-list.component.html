@@ -1,0 +1,44 @@
+<h1 id="tableLabel">Water Us</h1>
+
+<p></p>
+
+<p *ngIf="!plants"><em>Loading...</em></p>
+<div class="row">
+  <div class="col-md-10">
+    <table class='table table-content' aria-labelledby="tableLabel" *ngIf="plants">
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th>My Name</th>
+          <th>My Status</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let plant of plants">
+          <td><img src="/images/plants/{{ plant.image }}" class="logo-img" /></td>
+          <td>{{ plant.name }}</td>
+          <td>
+            <div *ngIf="!plant.isWatered && !plant.isWatering" class="alert-txt">
+              WATER ME!
+            </div>
+            <img *ngIf="!plant.isWatered && !plant.isWatering" src="/images/alert.gif" alt="click to water" class="grid-img">
+            <img *ngIf="plant.isWatered && !plant.isWatering" src="/images/i-m-good.gif" alt="I`m good" class="grid-img">
+            <img *ngIf="plant.isWatering" src="/images/in-progress.gif" alt="in progress" class="grid-img">
+          </td>
+          <td>
+            <img *ngIf="plant.isWatering" src="/images/watering-can-progress.png" alt="in progress" class="btn-img">
+            <a *ngIf="!plant.isWatering && !plant.cannotWater" (click)="waterMe(plant.id)"><img src="/images/watering-can.png" alt="edit" class="btn-img"></a>
+            <div *ngIf="!plant.isWatering && plant.cannotWater">
+              <div>Please wait...</div>
+              <div><img scr="/images/no-water.jpg" class="grid-img" /></div>
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+

@@ -1,0 +1,6 @@
+@MessageService.Server_HostAddress = http://localhost:5225
+
+GET {{MessageService.Server_HostAddress}}/plants/
+Accept: application/json
+
+###

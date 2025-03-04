@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MessageService.Common\MessageService.Common.csproj" />
+    <ProjectReference Include="..\MessageService.DataModel\MessageService.DataModel.csproj" />
+  </ItemGroup>
+
+</Project>
