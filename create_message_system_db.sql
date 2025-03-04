@@ -4,9 +4,9 @@ GO
 CREATE DATABASE [MessageSystem]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'MessageSystem', FILENAME = N'C:\Users\tsipc\source\repos\MessageServiceData\MessageSystem.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'MessageSystem', FILENAME = N'[DataFilePath]\MessageSystem.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'MessageSystem_log', FILENAME = N'C:\Users\tsipc\source\repos\MessageServiceData\MessageSystem.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'MessageSystem_log', FILENAME = N'[DataFilePath]\MessageSystem.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
  WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
 ALTER DATABASE [MessageSystem] SET COMPATIBILITY_LEVEL = 150
